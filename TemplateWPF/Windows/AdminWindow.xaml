@@ -1,0 +1,26 @@
+﻿<Window x:Class="TemplateWPF.Windows.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TemplateWPF.Windows"
+        mc:Ignorable="d"
+        Title="AdminWindow" Height="436" Width="690" WindowStartupLocation="CenterOwner" Icon="../Content/logo.png">
+    <Grid>
+        <StackPanel Orientation="Horizontal" Margin="25,25,25,25">
+            <StackPanel>
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Id: " />
+                <TextBlock Text="{Binding CurrentUser.Id}" />
+                <TextBlock Text="Name: " />
+                <TextBlock Text="{Binding CurrentUser.Name}" />
+                <TextBlock Text="Email: " />
+                <TextBlock Text="{Binding CurrentUser.Email}" />
+            </StackPanel>
+                <StackPanel>
+                    <Button Name="DeleteUserButton" Content="Delete User" Click="DeleteUserButton_Click"></Button>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
